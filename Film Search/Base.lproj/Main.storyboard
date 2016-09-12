@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" id="BYZ-38-t0r" customClass="MainViewController" customModule="Film_Search" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="87H-Ig-ajM">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="KdD-mS-O0m"/>
+                                    <constraint firstAttribute="height" constant="128" id="yNX-Yk-9xb"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="agP-jb-7Em">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Jh-gy-hBA">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="laR-gB-972"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="87H-Ig-ajM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="22" id="67V-zg-F8S"/>
+                            <constraint firstItem="agP-jb-7Em" firstAttribute="top" secondItem="1Jh-gy-hBA" secondAttribute="bottom" id="ILO-3L-SYM"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="agP-jb-7Em" secondAttribute="bottom" id="LP9-fn-qU7"/>
+                            <constraint firstItem="1Jh-gy-hBA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="12" id="Ps1-TG-CfA"/>
+                            <constraint firstItem="agP-jb-7Em" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="aXn-Od-v1u"/>
+                            <constraint firstItem="1Jh-gy-hBA" firstAttribute="top" secondItem="87H-Ig-ajM" secondAttribute="bottom" constant="33" id="ivV-A0-wd7"/>
+                            <constraint firstAttribute="trailing" secondItem="agP-jb-7Em" secondAttribute="trailing" id="o38-Ga-PWO"/>
+                            <constraint firstItem="87H-Ig-ajM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rWc-0M-Fpz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1Jh-gy-hBA" secondAttribute="trailing" constant="12" id="zLl-8I-QrW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="logoImageView" destination="87H-Ig-ajM" id="MjE-HI-JXI"/>
+                        <outlet property="resultsTableView" destination="agP-jb-7Em" id="XeG-Qm-hfj"/>
+                        <outlet property="searchTextField" destination="1Jh-gy-hBA" id="Fi0-Pd-nvJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+</document>
