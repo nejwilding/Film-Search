@@ -53,7 +53,7 @@ class MainViewController: UIViewController {
     // MARK: - Public
     
     public func textFieldValueDidChange(sender: UITextField) {
-        print(sender)
+        print(sender.text)
     }
 }
 
